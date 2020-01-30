@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap');
+
+:root {
+    /* Primary */
+    --desaturated-red: hsl(0, 36%, 70%);
+    --soft-red: hsl(0, 93%, 68%);
+    /* Neutral */
+    --dark-grey-red: hsl(0, 6%, 24%);
+}
+
+body {
+    background-color: var(--desaturated-red);
+    background: url(../images/bg-pattern-desktop.svg) no-repeat center center/cover;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+nav {
+    position: absolute;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    margin-left: 8rem;
+    margin-top: 4rem;
+    padding-top: 3.5rem;
+}
+
+nav .logo {
+    margin: 3rem 0 0rem 8rem;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+
+.hero-img img {
+    height: 100vh;
+    width: 100%;
+}
+
+.hero-content h1 {
+    line-height: 1.1;
+}
+
+.display {
+    font-size: 3.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--dark-grey-red);
+    letter-spacing: 15px;
+}
+
+.info {
+    color: var(--desaturated-red);
+    font-weight: 300;
+}
+
+.lead {
+    color: var(--desaturated-red);
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 1.5rem 0;
+}
+
+input[type="email"] {
+    border: 1px solid var(--desaturated-red);
+    border-radius: 24px;
+    padding: 1rem;
+    width: 100%;
+    position: relative;
+}
+
+input[type="submit"] {
+    border: none;
+    border-radius: 24px;
+    padding: 0.75rem 2.25rem;
+    color: white;
+    background: linear-gradient(135deg,hsl(0, 80%, 86%),hsl(0, 74%, 74%));
+    position: absolute;
+    transform: translate(-75px, 0);
+}
+
+input[type="submit"]:hover {
+    box-shadow: 1px 6px 10px 8px var(--desaturated-red);
+    background-color: var(--soft-red);
+}
+
+input[value=">"] {
+    font-size: 1.5rem;
+}
+
+::placeholder {
+    color: var(--desaturated-red);
+}
+
+@media screen and (max-width: 700px) {
+    nav {
+        position: static;
+    }
+
+    nav .logo {
+         padding-bottom: 1.5rem;
+    }
+
+     
+    .grid {
+        grid: none;
+    }
+
+    .hero-content {
+        order: 1;
+         width: 80%;
+         text-align: center;
+         margin: 0;
+         padding: 3rem;
+    }
+
+    .hero-img img {
+         height: 60vh;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    nav .logo {
+        margin-left: 4rem;
+    }
+
+
+    .hero-content {
+        margin-left: 4rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .display {
+        font-size: 3rem;
+    }
+}
