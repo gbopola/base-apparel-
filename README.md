@@ -1,1 +1,1 @@
-# huddle-short-landing-page
+# base apparel landing page
